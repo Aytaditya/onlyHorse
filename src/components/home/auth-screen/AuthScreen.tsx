@@ -1,8 +1,9 @@
+import HeroSection from "./HeroSection"
 
 const AuthScreen = () => {
   return (
-    <div>
-    <h1 className="text-primary">hiii</h1>  
+    <div className="flex flex-col">
+      <HeroSection/>
     </div>
   )
 }
