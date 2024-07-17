@@ -1,6 +1,11 @@
 import HeroSection from "./HeroSection"
-import UnderlinedText from "@/components/decorators/UnderlinedText"
 import TodaysHighlight from "./TodaysHighlight"
+import MasonryGrid from "./MasonryGrid"
+import Features from "./Features"
+
+import UnderlinedText from "@/components/decorators/UnderlinedText"
+import RotatedText from "@/components/decorators/RotatedText"
+
 
 const AuthScreen = () => {
   return (
@@ -21,9 +26,11 @@ const AuthScreen = () => {
 
             <div className="mt-24">
               <p className="text-2xl md:text-5xl text-center tracking-tighter font-bold">
-              Meet the Stars of our Farm
+              Meet the <RotatedText>Stars</RotatedText> of our Farm ⭐
               </p>
+            <MasonryGrid/>
             </div>
+            <Features/>
           </div>
         </div>
 
