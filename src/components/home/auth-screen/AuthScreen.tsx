@@ -2,6 +2,8 @@ import HeroSection from "./HeroSection"
 import TodaysHighlight from "./TodaysHighlight"
 import MasonryGrid from "./MasonryGrid"
 import Features from "./Features"
+import Pricing from "@/components/Pricing"
+
 
 import UnderlinedText from "@/components/decorators/UnderlinedText"
 import RotatedText from "@/components/decorators/RotatedText"
@@ -31,6 +33,9 @@ const AuthScreen = () => {
             <MasonryGrid/>
             </div>
             <Features/>
+            <Pricing/>
+
+
           </div>
         </div>
 
