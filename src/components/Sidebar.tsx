@@ -11,6 +11,7 @@ import {
     DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 import { LogoutLink } from "@kinde-oss/kinde-auth-nextjs";
+import { ModeToggle } from "./ModeToggle";
 
 
 const SIDEBAR_LINKS = [
@@ -40,20 +41,20 @@ const Sidebar = () => {
 
             <nav className="flex flex-col gap-3 ">
                 {SIDEBAR_LINKS.map(link => (
-                    <Link href={link.href} key={link.href} className="flex w-12 lg:w-full items-center gap-2 hover:bg-primary-foreground font-bold hover:text-primary px-2 py-1 rounded-full justify-center lg:justify-normal">
+                    <Link href={link.href} key={link.href} className="flex w-12 lg:w-full items-center gap-2 hover:bg-primary-foreground font-semibold hover:text-primary px-2 py-1 rounded-full justify-center lg:justify-normal">
                         <link.icon className="w-6 h-6" />
                         <span className="hidden lg:block">{link.label}</span>
                     </Link>
                 ))}
                 {isAdmin && (
-                    <Link href="/secret-dashboard" className="flex w-12 lg:w-full items-center gap-2 hover:bg-primary-foreground font-bold hover:text-primary px-2 py-1 rounded-full justify-center lg:justify-normal">
+                    <Link href="/secret-dashboard" className="flex w-12 lg:w-full items-center gap-2 hover:bg-primary-foreground font-semibold hover:text-primary px-2 py-1 rounded-full justify-center lg:justify-normal">
                         <LayoutDashboard className="w-6 h-6" />
                         <span className="hidden lg:block">Dashboard</span>
                     </Link>
                 )}
 
                 <DropdownMenu>
-                    <div className="flex w-12 lg:w-full items-center gap-2 hover:bg-primary-foreground font-bold hover:text-primary px-2 py-1 rounded-full justify-center lg:justify-normal">
+                    <div className="flex w-12 lg:w-full items-center gap-2 hover:bg-primary-foreground font-semibold hover:text-primary px-2 py-1 rounded-full justify-center lg:justify-normal">
                         <DropdownMenuTrigger className="flex items-center gap-2 ">
                             <User className="w-6 h-6" />
                             <span className="hidden lg:block">Settings</span>
@@ -70,7 +71,8 @@ const Sidebar = () => {
                             </LogoutLink>
                     </DropdownMenuContent>
                 </DropdownMenu>
-
+                {/* for light and dark mode */}
+                <ModeToggle/>
             </nav>
         </div>
     )

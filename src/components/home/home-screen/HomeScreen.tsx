@@ -1,9 +1,10 @@
 import BaseLayout from "@/components/BaseLayout"
+import UserProfile from "./UserProfile"
 
 const HomeScreen = () => {
   return (
     <BaseLayout renderRightPannel={true}>
-     hiii
+     <UserProfile/>
 
     </BaseLayout>
   )
