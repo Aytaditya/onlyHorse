@@ -1,5 +1,6 @@
 import { buttonVariants } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import ZoomedImage from "@/components/ZoomedImage"
 import { cn } from "@/lib/utils"
 import { IndianRupee } from "lucide-react"
 import Link from "next/link"
@@ -21,7 +22,8 @@ const Suggestedproduct = ({product}:{product:any}) => {
       </CardHeader>
 
       <CardContent className="flex flex-col flex-1 gap-2 p-2 items-center ">
-        <img src={product.image} alt="Product images" className="w-32 object-cover" />
+        {/* <img src={product.image} alt="Product images" className="w-32 object-cover" /> */}
+        <ZoomedImage imgSrc={product.image} className="h-40 "/>
         <div className="flex justify-center mt-auto ">
           <Link href={`/merch/${product.id}`} className={cn("w-full",buttonVariants({size:"sm"}))}>
           Click to Buy
