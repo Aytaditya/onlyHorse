@@ -1,12 +1,18 @@
+"use client"
+
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Heart, ImageIcon, LockKeyholeIcon, MessageCircle, Trash } from "lucide-react"
 import { user } from "@/dummy_data"
 import Image from "next/image"
 import Link from "next/link"
 import { buttonVariants } from "@/components/ui/button"
+import { useState } from "react"
+import { cn } from "@/lib/utils"
 
 
 const Post = ({ post, isSubscribed, admin }: { post: any, isSubscribed: boolean, admin: any }) => {
+
+  const [isLiked,setIsLiked]=useState<boolean>(false)
   return (
     <div className="flex flex-col gap-3 p-3 border-t">
       <div className="flex items-center justify-between">
@@ -73,10 +79,12 @@ const Post = ({ post, isSubscribed, admin }: { post: any, isSubscribed: boolean,
 
       <div className="flex gap-4 ">
 
-        
+
         {/* post liking system */}
         <div className="flex gap-1 items-center">
-          <Heart className="w-5 h-5 cursor-pointer"/>
+
+          {/* basically we passed default classes and made it red if isLiked is true using sdhadcn */}
+          <Heart className={cn('w-5 h-5 cursor-pointer',{'text-red-500':isLiked,'fill-red-500':isLiked})} onClick={(e:any)=>setIsLiked(!isLiked)}/>
           <span className="text-sm text-zinc-400 tracking-tighter">55</span>
         </div>
 
