@@ -6,7 +6,7 @@ export const admin = {
 };
 
 export const user = {
-	id: 123,
+	id: 13,
 	email: "user@gmail.com",
 	name: "John Doe",
 	image: "https://avatar.iran.liara.run/public/boy?username=john",
@@ -18,7 +18,7 @@ export const user = {
 export const posts = [
 	{
 		id: 1,
-		text: "Post Content",
+		text: "This is a content",
 		mediaType: "image",
 		mediaUrl: "/featured/featured1.jpg",
 		likes: 12,
