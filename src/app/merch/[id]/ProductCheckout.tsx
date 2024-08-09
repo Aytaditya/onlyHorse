@@ -23,7 +23,7 @@ const ProductCheckout = ({product}:{product:any}) => {
         </p>
         <Label className="mt-5 inline-block">Select Size</Label>
 
-        <Select>
+        <Select onValueChange={setSelectedSize}>
             <SelectTrigger className="w-[180px] focus:ring-0">
                 <SelectValue placeholder="Select" />
             </SelectTrigger>
@@ -34,7 +34,7 @@ const ProductCheckout = ({product}:{product:any}) => {
             </SelectContent>
         </Select>
 
-        <Button className="mt-5 text-white py-5 rounded-md" size={"sm"}>
+        <Button className="mt-5 text-white py-5 rounded-md" size={"sm"} onClick={()=>alert(`purchase for ${selectedSize} proceeded`)}>
             Buy Now
         </Button>
       </div>
