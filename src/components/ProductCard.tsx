@@ -25,17 +25,32 @@ const ProductCard = ({product}:{product:any}) => {
         <div className="flex justify-center mt-auto">
         {adminView && (
             <Button className="w-full" variant={"outline"}>
-                Archieve
+               {product.isArchived ? "Unarchive":"Archive"}
             </Button>
         )}
         {!adminView && (
             // color in coming because of button variant
             <Link className={cn("w-full",buttonVariants())} href={`/merch/${product.id}`}>
-                Add to Cart
+                Buy Now
             </Link>
         )}
         </div>
       </CardContent>
+
+
+      <div className="px-3 pb-1">
+
+          {/* showing active and archived products to admin on bases of isArchived value */}
+      {adminView && (
+        <span className={`text-sm font-medium ${product.isArchived ? "text-red-500":"text-green-500"}`}>
+            {product.isArchived ? "Archived":"Active"}
+        </span>
+      )}
+
+      {!adminView && (
+        <span className="text-sm font-medium text-green-500 ">InStock</span>
+        )}
+      </div>
 
     </Card>
   )

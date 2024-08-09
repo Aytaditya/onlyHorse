@@ -4,7 +4,7 @@ import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 
 export default async function Home(){
   const {getUser}=getKindeServerSession();
-  console.log(getUser);
+  // console.log(getUser);
   const user=await getUser();
   return(
     <main>
