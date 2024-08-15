@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/providers/ThemeProvider";
+import 'next-cloudinary/dist/cld-video-player.css';
 
 import "./globals.css";
 import Footer from "@/components/Footer";
