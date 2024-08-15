@@ -95,6 +95,8 @@ const ContentTab = () => {
                             <Label className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" htmlFor="public">Mark as public</Label>
                         </div>
 
+
+                        {/* warning */}
                         <Alert variant={"default"} className="text-yellow-400">
                             <TriangleAlert className="h-4 w-4 !text-yellow-400" />
                             <AlertTitle>Warning</AlertTitle>

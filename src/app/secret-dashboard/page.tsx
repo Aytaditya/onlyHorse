@@ -1,6 +1,7 @@
 import BaseLayout from "@/components/BaseLayout"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import ContentTab from "./content/ContentTab"
+import StoreTab from "./store/StoreTab"
 
 
 
@@ -23,10 +24,13 @@ const Page = () => {
                     </TabsTrigger>
                 </TabsList>
                 <TabsContent value="content">
-                    {/* content addition form here */}
+                    {/* content tab addition form here */}
                     <ContentTab/>
                 </TabsContent>
-                <TabsContent value="store">store here</TabsContent>
+                <TabsContent value="store">
+                    {/* store content yaha hain */}
+                    <StoreTab/>
+                </TabsContent>
                 <TabsContent value="analytics">analytics here</TabsContent>
             </Tabs>
 
